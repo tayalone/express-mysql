@@ -9,6 +9,8 @@ mySql.sequelize.sync({ force: true }).then(() => {
   console.log("Drop and Resync with { force: true }")
 })
 
+console.log(`mySql.sequelize`, mySql.sequelize.models)
+
 // start express server
 express.listen(port, () =>
   console.log(`Example app listening at http://localhost:${port}`)
