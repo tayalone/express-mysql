@@ -9,14 +9,6 @@ const { logs, env, port } = require("./variables")
 
 const app = express()
 
-const { Sequelize } = require("sequelize")
-
-var mySqlSequelize = new Sequelize("shippop_member", "root", "password", {
-  host: "db",
-  dialect: "mysql",
-  port: 3306
-})
-
 app.use(morgan(logs))
 
 app.use(bodyParser.json())
